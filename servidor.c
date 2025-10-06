@@ -287,7 +287,6 @@ int main() {
             if (idx != -1) {
                 if (quitar_usuario_de_sala(idx, msg.pid) == 0) {
                     printf("SERVIDOR: %s (pid %d) ha abandonado la sala '%s'\n", msg.remitente, msg.pid, msg.sala);
-                    append_log(msg.sala, "Sistema", msg.texto);
 
                     // notificar a los demas
                     mensaje_t nota;
@@ -297,7 +296,6 @@ int main() {
                     strncpy(nota.sala, msg.sala, MAX_NOMBRE-1);
                     snprintf(nota.texto, MAX_TEXTO-1, "%s ha abandonado la sala.", msg.remitente);
                     enviar_a_todos_en_sala(idx, &nota);
-                    append_log(msg.sala, "Sistema", nota.texto);
                     // confirmar a usuario
                     int msqid_client = msgget(msg.client_key, 0666);
                     if (msqid_client != -1) {
