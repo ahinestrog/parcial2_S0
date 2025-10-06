@@ -14,4 +14,4 @@
 * /leave -> Para salirse de la sala actual en la que se encuentra
 * /quit -> Para abandonar el menú de ejecución
 ### Persistencia:
-Mensajes guardados en logs/Nombre_sala.log -> Que se crea un automáticamente cuando se compila el archivo del servidor, y luego cada .log se crea luego de crear cada sala de mensajes
+Mensajes guardados en logs/Nombre_sala.log -> Que se crea un directorio automáticamente cuando se compila el archivo del servidor, y luego cada .log se crea luego de crear cada sala de mensajes
